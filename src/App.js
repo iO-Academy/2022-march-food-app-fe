@@ -3,6 +3,7 @@ import './App.css';
 import {useEffect, useState} from "react";
 import Homepage from "./components/Homepage";
 import Header from "./components/Header";
+import Footer from "./components/Footer"
 
 
 
@@ -22,7 +23,7 @@ function App() {
 
     <>
     <div className="App">
-      <Header />
+      <Footer />
     </div>
     
     <main>
