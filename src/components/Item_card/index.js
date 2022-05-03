@@ -3,7 +3,7 @@ import './Item_card.css'
 const Item_card = (foodItem) => {
     return(
         <>
-            <div className = 'Item_card'>
+            <div className = 'item_card'>
                 <p className='item_name'>{foodItem.foodName}</p>
                 <div className='item_details'>
                     <p className = 'item_calories'>
@@ -22,11 +22,9 @@ const Item_card = (foodItem) => {
                 <div className= 'price'>
                     £{foodItem.price}
                 </div>
-
-
             </div>
         </>
-
-    )}
+    )
+}
 
 export default Item_card

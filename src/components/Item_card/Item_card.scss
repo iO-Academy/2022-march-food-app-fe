@@ -1,13 +1,12 @@
-@mixin Item_details(){
+@mixin item_details(){
   display: inline-block;
   border-radius: 5px;
   margin-right: 3px;
   padding: 3px;
   font-size: 10px;
   font-weight: 800;
-
 }
-.Item_card{
+.item_card{
   max-width: 90%;
   border-style: solid;
   margin: 10px;
@@ -22,19 +21,19 @@
 }
 .item_calories{
   background-color: #17a2b8;
-  @include Item_details;
+  @include item_details;
   color: #ffffff;
 }
 
 .item_type{
   background-color:#007bff;
- @include Item_details;
+  @include item_details;
   color: #ffffff;
 }
 
 .item_category{
   background-color: #ffc107;
- @include Item_details
+  @include item_details
 }
 
 
