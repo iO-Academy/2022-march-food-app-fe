@@ -6,17 +6,23 @@ import Jumbotron from './components/Jumbotron';
 import Footer from "./components/Footer"
 
 function App() {
+  const [activeRestaurantName, setActiveRestaurantName] = useState("")
+  const [activeRestaurantId, setActiveRestaurantId] = useState(0)
+
+  function buttonSetter(name, id) {
+    setActiveRestaurantName(name)
+    setActiveRestaurantId(id)
+  }
 
   return (
-
     <>
     <Header />
     <div className="App">
-      <Jumbotron />
+      <Jumbotron restaurantName={activeRestaurantName} restaurantID={activeRestaurantId}/>
     </div>
     
     <main>
-      <Homepage />
+      <Homepage buttonSetter={buttonSetter}/>
     </main>
     <Footer />
     </>

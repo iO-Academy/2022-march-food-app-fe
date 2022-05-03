@@ -1,12 +1,10 @@
 import './Button.scss'
 
-const Button = ({ name }) => {
+const Button = ({name, buttonSetter, id}) => {
     return (
         <>
-                <button className='button'>{name}</button>
+            <button className='button' onClick={() => {buttonSetter(name, id)}}>{name}</button>
         </>
-
-
     )
 }
 export default Button
