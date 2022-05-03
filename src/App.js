@@ -13,9 +13,14 @@ const App = () => {
     setActiveRestaurantId(id)
   }
 
+  function idNameResetter() {
+    setActiveRestaurantName('')
+    setActiveRestaurantId(0)
+  }
+
   return (
     <>
-    <Header />
+    <Header restaurantID={activeRestaurantId} idNameResetter={idNameResetter}/>
     <Jumbotron restaurantName={activeRestaurantName} restaurantID={activeRestaurantId}/>
     <Homepage buttonSetter={buttonSetter}/>
     <Footer />

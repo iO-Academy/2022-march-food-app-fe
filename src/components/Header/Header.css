@@ -1,11 +1,18 @@
 .App-header {
-  border-bottom-color: #d7d7d7;
-  border-bottom-style: solid;
+  margin-bottom: 15px;
   text-align: center;
-  border-bottom-width: thin;
-  padding: 10px 20px;
+  padding-top: 15px;
   font-size: 26px;
   font-weight: 600;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.theLine {
+  border-bottom: 1px solid;
+  border-bottom-color: #d7d7d7;
+  margin-bottom: 15px;
 }
 
 .blue-text {

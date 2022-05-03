@@ -1,12 +1,18 @@
 import './Header.scss'
+import ChangeRestaurantButton from "../ChangeRestaurantButton";
 
-const Header = () => {
+const Header = ({restaurantID, idNameResetter}) => {
     return(
-        <div className='App-header'>
+        <>
             <div className='container'>
-                <p><span className= 'blue-text'> Food</span>Delivery</p>
+                <div className='App-header'>
+                    <p><span className= 'blue-text'> Food</span>Delivery</p>
+                    {restaurantID ? <ChangeRestaurantButton idNameResetter={idNameResetter} /> : ''}
+                </div>
             </div>
-        </div>
+            <div className="theLine">
+            </div>
+        </>
     )
 }
 
