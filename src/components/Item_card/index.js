@@ -1,26 +1,26 @@
 import './Item_card.css'
 
-const Item_card = (foodItem) => {
+const Item_card = ({foodName, price, calories, foodType, side}) => {
     return(
         <>
             <div className = 'item_card'>
-                <p className='item_name'>{foodItem.foodName}</p>
+                <p className='item_name'>{foodName}</p>
                 <div className='item_details'>
                     <p className = 'item_calories'>
-                        Calories: {foodItem.calories}
+                        Calories: {calories}
                     </p>
-                    {foodItem.foodType ?
+                    {foodType ?
                     <p className = 'item_type'>
-                        Type: {foodItem.foodType}
+                        Type: {foodType}
                     </p> : ''
                 }
-                    {foodItem.side ?
+                    {side ?
                     <p className = 'item_category'>
                         side
                     </p> :''}
                 </div>
                 <div className= 'price'>
-                    £{foodItem.price}
+                    £{price}
                 </div>
             </div>
         </>
