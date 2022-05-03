@@ -3,7 +3,7 @@ import './style.scss';
 const Jumbotron = () => {
    return (
        <>
-           <div className="jumbo_background" >
+           <div className="jumbo_background container" >
                <div className="jumbo_title_box">
                    <h1 className="jumbo_title">
                         Food. Delivered.

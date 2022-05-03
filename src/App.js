@@ -25,7 +25,7 @@ function App() {
       <Jumbotron />
     </div>
     
-    <main>
+    <main className='container restaurant__grid'>
       <Homepage restaurantsData={restaurantsData} updateRestaurantsData={updateRestaurantsData}/>
     </main>
     <Footer />
