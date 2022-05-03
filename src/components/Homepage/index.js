@@ -8,7 +8,7 @@ const Homepage = ({restaurantsData, updateRestaurantsData}) => {
             .then(data => {
                 updateRestaurantsData(data)
             })
-    }, [updateRestaurantsData])
+    }, [])
 
     let restaurants = restaurantsData.map((restaurant) => {
         return <Button name={restaurant.name} />
