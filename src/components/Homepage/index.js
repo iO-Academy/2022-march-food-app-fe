@@ -1,17 +1,20 @@
-import {useEffect} from "react";
+import {useEffect, useState} from "react";
 import Button from '../Button'
 
-const Homepage = ({restaurantsData, updateRestaurantsData}) => {
+const Homepage = () => {
+
+    const [restaurantsData, setRestaurantsData] = useState([])
+
     useEffect(() => {
         fetch("http://localhost:8080/restaurants")
             .then(response => response.json())
             .then(data => {
-                updateRestaurantsData(data)
+                setRestaurantsData(data)
             })
     }, [])
 
     let restaurants = restaurantsData.map((restaurant) => {
-        return <Button name={restaurant.name} />
+        return <Button key={restaurant.id} name={restaurant.name} />
     })
 
     return (
