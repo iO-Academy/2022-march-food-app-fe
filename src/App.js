@@ -1,11 +1,9 @@
-import logo from './logo.svg';
 import './App.css';
 import {useEffect, useState} from "react";
 import Homepage from "./components/Homepage";
 import Header from "./components/Header";
+import Jumbotron from './components/Jumbotron';
 import Footer from "./components/Footer"
-
-
 
 function App() {
 
@@ -23,6 +21,7 @@ function App() {
 
     <>
     <div className="App">
+      <Jumbotron />
       <Footer />
     </div>
     
