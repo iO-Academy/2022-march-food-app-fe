@@ -1,4 +1,5 @@
 import {useEffect, useState} from "react";
+import '../Homepage/Homepage.scss'
 import Button from '../Button'
 
 const Homepage = () => {
@@ -18,9 +19,9 @@ const Homepage = () => {
     })
 
     return (
-        <>
+        <main className='container restaurant__grid'>
             {restaurants}
-        </>
+        </main>
     )
 }
 

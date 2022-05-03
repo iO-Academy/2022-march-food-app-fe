@@ -26,22 +26,3 @@ main {
   width: 96%;
   margin: 0 auto;
 }
-
-.restaurant__grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  row-gap: 15px;
-  column-gap: 15px;
-}
-
-@media (min-width: 750px) {
-  .restaurant__grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (min-width: 1000px) {
-  .restaurant__grid {
-    grid-template-columns: repeat(4, 1fr);
-  }
-}
