@@ -1,20 +1,19 @@
-.App-header{
+.App-header {
+  margin-bottom: 15px;
   border-bottom-color: #d7d7d7;
   border-bottom-style: solid;
-  text-align:center;
+  text-align: center;
   border-bottom-width: thin;
   padding: 10px 20px;
   font-size: 26px;
   font-weight: 600;
-
 }
-.blue-text{
-  color: #17a2b8
+.blue-text {
+  color: #17a2b8;
 }
 
-@media  screen and (min-width: 745px){
-  .App-header{
+@media screen and (min-width: 745px) {
+  .App-header {
     text-align: left;
-
   }
 }

@@ -1,51 +1,51 @@
-body {
-  margin: 0 auto;
-}
-
 .jumbo_background {
-  background-image: url('jumbotron_images/background.jpeg');
+  background-image: url("jumbotron_images/background.jpeg");
   background-size: cover;
   background-position: center;
-  width: auto;
-  height: 350px;
+  height: 250px;
   //display: grid;
   //place-items: center;
 
   display: flex;
   align-items: center;
   justify-content: center;
-}
 
-.jumbo_title_box {
-  background:rgba(255,255,255, 0.7);
-  max-width: 90%;
-  padding: 0px 15px 15px 15px;
-}
-
-.jumbo_title {
-  color: #17a2b8;
-  font-size: 70px;
-  font-weight: 500;
-  margin: 0;
-}
-
-.jumbo_subtitle {
-  font-size: 27px;
-  margin: 0;
-
-}
-
-@media (min-width: 1200px) {
   .jumbo_title_box {
-    padding: 50px;
+    background: rgba(255, 255, 255, 0.7);
+    max-width: 90%;
+    padding: 0px 15px 15px 15px;
   }
 
   .jumbo_title {
+    color: #17a2b8;
     font-size: 40px;
+    font-weight: 500;
+    margin: 0;
+    text-align: center;
   }
 
   .jumbo_subtitle {
-    font-size: 15px;
-    margin-top: 10px;
+    font-size: 16px;
+    margin: 0;
+    text-align: center;
+  }
+}
+
+@media (min-width: 1200px) {
+  .jumbo_background {
+    height: 400px;
+
+    .jumbo_title_box {
+      padding: 50px;
+    }
+
+    .jumbo_title {
+      font-size: 40px;
+    }
+
+    .jumbo_subtitle {
+      font-size: 15px;
+      margin-top: 10px;
+    }
   }
 }

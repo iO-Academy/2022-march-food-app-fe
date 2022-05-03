@@ -1,11 +1,10 @@
-import './App.css';
-import {useEffect, useState} from "react";
-import Homepage from "./components/Homepage";
-import Header from "./components/Header";
-import Jumbotron from './components/Jumbotron';
+import {useEffect, useState} from "react"
+import Homepage from "./components/Homepage"
+import Header from "./components/Header"
+import Jumbotron from './components/Jumbotron'
 import Footer from "./components/Footer"
 
-function App() {
+const App = () => {
   const [activeRestaurantName, setActiveRestaurantName] = useState("")
   const [activeRestaurantId, setActiveRestaurantId] = useState(0)
 
@@ -17,16 +16,11 @@ function App() {
   return (
     <>
     <Header />
-    <div className="App">
-      <Jumbotron restaurantName={activeRestaurantName} restaurantID={activeRestaurantId}/>
-    </div>
-    
-    <main>
-      <Homepage buttonSetter={buttonSetter}/>
-    </main>
+    <Jumbotron restaurantName={activeRestaurantName} restaurantID={activeRestaurantId}/>
+    <Homepage buttonSetter={buttonSetter}/>
     <Footer />
     </>
-  );
+  )
 }
 
-export default App;
+export default App
