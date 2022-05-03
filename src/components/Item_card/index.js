@@ -9,15 +9,18 @@ const Item_card = (foodItem) => {
                     <p className = 'item_calories'>
                         Calories: {foodItem.calories}
                     </p>
+                    {foodItem.foodType ?
                     <p className = 'item_type'>
-                        Type: {foodItem.type}
-                    </p>
+                        Type: {foodItem.foodType}
+                    </p> : ''
+                }
+                    {foodItem.side ?
                     <p className = 'item_category'>
                         side
-                    </p>
+                    </p> :''}
                 </div>
                 <div className= 'price'>
-                    £3.99
+                    £{foodItem.price}
                 </div>
 
 

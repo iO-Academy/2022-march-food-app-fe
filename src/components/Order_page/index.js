@@ -15,9 +15,9 @@ const Order_page = () => {
 
     let foodItem = foodItemData.map((foodItem) => {
         return <Item_card price={foodItem.price} calories={foodItem.calories}
-                          foodName={foodItem.foodName} />
+                          foodName={foodItem.foodName} foodType ={foodItem.foodType}
+        side ={foodItem.sideItem}/>
     })
-//
     return (
         <>console.log(foodItem)
             {foodItem}
