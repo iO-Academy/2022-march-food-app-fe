@@ -1,4 +1,4 @@
-import './style.scss';
+import './style.scss'
 
 const Jumbotron = () => {
    return (
@@ -12,4 +12,5 @@ const Jumbotron = () => {
         </div>
    )
 }
+
 export default Jumbotron

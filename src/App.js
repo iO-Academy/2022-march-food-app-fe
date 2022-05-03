@@ -5,16 +5,14 @@ import Jumbotron from './components/Jumbotron'
 import Footer from "./components/Footer"
 
 const App = () => {
-
   return (
-
     <>
-    <Header />
-    <Jumbotron />
-    <Homepage />
-    <Footer />
+     <Header />
+     <Jumbotron />
+     <Homepage />
+     <Footer />
     </>
   )
 }
 
-export default App;
+export default App

@@ -1,4 +1,4 @@
-import {useEffect, useState} from "react";
+import {useEffect, useState} from "react"
 import '../Homepage/Homepage.scss'
 import Button from '../Button'
 
