@@ -10,8 +10,6 @@ const Header = ({restaurantID, idNameResetter}) => {
                     {restaurantID ? <ChangeRestaurantButton idNameResetter={idNameResetter} /> : ''}
                 </div>
             </div>
-            <div className="theLine">
-            </div>
         </>
     )
 }
