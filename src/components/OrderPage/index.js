@@ -22,4 +22,4 @@ const Order_page = () => {
     )
 }
 
-export default Order_page
+export default OrderPage

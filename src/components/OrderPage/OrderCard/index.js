@@ -1,5 +1,5 @@
-import './Order_card.scss'
-const Order_card = () => {
+import './OrderCard.scss'
+const OrderCard = () => {
     return (
         <div className="order_card container">
             <h3><i className="fa-solid fa-cart-shopping shopping_cart"/> Order</h3>
@@ -15,4 +15,4 @@ const Order_card = () => {
     )
 }
 
-export default Order_card
+export default OrderCard
