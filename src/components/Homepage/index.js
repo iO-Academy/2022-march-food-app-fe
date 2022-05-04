@@ -1,8 +1,8 @@
 import {useEffect, useState} from "react"
 import '../Homepage/Homepage.scss'
-import Button from '../Button'
+import RestaurantButton from '../RestaurantButton'
 
-const Homepage = ({buttonSetter}) => {
+const Homepage = ({setActiveRestaurant}) => {
 
     const [restaurantsData, setRestaurantsData] = useState([])
 
@@ -15,7 +15,7 @@ const Homepage = ({buttonSetter}) => {
     }, [])
 
     let restaurants = restaurantsData.map((restaurant) => {
-        return <Button key={restaurant.id} id={restaurant.id} name={restaurant.name} buttonSetter={buttonSetter}/>
+        return <RestaurantButton key={restaurant.id} id={restaurant.id} name={restaurant.name} setActiveRestaurant={setActiveRestaurant}/>
     })
 
     return (
