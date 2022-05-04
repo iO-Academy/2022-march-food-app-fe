@@ -7,6 +7,7 @@ const OrderPage = ({activeRestaurantId}) => {
     const [foodItemData, setItemData] = useState([])
     const [orderObject, setOrderObject] = useState([])
 
+
     const addItem = (foodName, price) => {
         let orderObjectClone = [...orderObject]
         const orderObjectItem = {foodName : foodName, price : price, qty: 1}
@@ -25,10 +26,28 @@ const OrderPage = ({activeRestaurantId}) => {
         console.log(orderObjectClone)
     }
 
-    
+    const removeItem = (foodName, price) => {
+        let orderObjectClone = [...orderObject]
+        const orderObjectItem = {foodName : foodName, price : price, qty: 0}
+        let itemOrdered = false
+        orderObject.forEach((orderItem, key) => {
+            
+            if (orderItem.foodName === foodName) {
+                itemOrdered = key
+            }
+        })
+      if (itemOrdered === false) {
+        orderObjectClone.push(orderObjectItem)
+       } else {
+       orderObjectClone[itemOrdered].qty--
+        if(orderObjectClone[itemOrdered].qty > -1){
+            orderObjectClone.splice(itemOrdered, 1)
+        }
 
-    const removeItem = () => {
-        
+        }
+        setOrderObject(orderObjectClone)
+        console.log(orderObject)
+
     }
 
     useEffect(() =>{
@@ -49,6 +68,7 @@ const OrderPage = ({activeRestaurantId}) => {
             orderObject={orderObject}
             addItem={addItem}
             removeItem={removeItem}
+            
             />
     })
 
