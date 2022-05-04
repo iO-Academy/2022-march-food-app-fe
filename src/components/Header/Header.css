@@ -4,9 +4,6 @@
   padding-top: 15px;
   font-size: 26px;
   font-weight: 600;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
 }
 
 .theLine {
@@ -21,7 +18,9 @@
 
 @media screen and (min-width: 745px) {
   .App-header {
-    text-align: left;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
 }
 

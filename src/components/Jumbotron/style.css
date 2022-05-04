@@ -3,6 +3,7 @@
   background-size: cover;
   background-position: center;
   height: 250px;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -10,7 +11,9 @@
 .jumbo_background .jumbo_title_box {
   background: rgba(255, 255, 255, 0.7);
   max-width: 90%;
-  padding: 0px 15px 15px 15px;
+  min-width: 30%;
+  padding: 0 80px;
+  white-space: nowrap;
 }
 .jumbo_background .jumbo_title {
   color: #17a2b8;
@@ -23,11 +26,14 @@
   font-size: 16px;
   margin: 0;
   text-align: center;
+  white-space: normal;
+  padding: 5px;
 }
 
 @media (min-width: 1200px) {
   .jumbo_background {
     height: 400px;
+    width: 98%;
   }
   .jumbo_background .jumbo_title_box {
     padding: 50px;

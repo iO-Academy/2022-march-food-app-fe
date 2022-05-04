@@ -6,6 +6,7 @@
   border-width: 1px;
   padding: 20px;
   border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 15px;
 }
 
 .item_name {
@@ -42,6 +43,10 @@
   padding: 3px;
   font-size: 10px;
   font-weight: 800;
+}
+
+.price {
+  padding: 15px 0px 5px;
 }
 
 /*# sourceMappingURL=Item_card.css.map */

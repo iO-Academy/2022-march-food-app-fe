@@ -2,7 +2,7 @@ import './ChangeRestaurantButton.scss'
 
 const ChangeRestaurantButton = ({idNameResetter}) => {
     return (
-        <a href='#' className='changeButton' onClick={idNameResetter}> &lt;&lt;Change Restaurant</a>
+        <a href='#' className='changeButton' onClick={idNameResetter}> &lt;&lt; Change Restaurant</a>
     )
 }
 
