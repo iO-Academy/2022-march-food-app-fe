@@ -11,8 +11,7 @@
   .jumbo_title_box {
     background: rgba(255, 255, 255, 0.7);
     max-width: 90%;
-    min-width: 30%;
-    padding : 0 80px;
+    min-width: 70%;
     white-space: nowrap;
   }
 
@@ -40,6 +39,7 @@
 
     .jumbo_title_box {
       padding: 50px;
+      min-width:30%;
     }
 
     .jumbo_title {
