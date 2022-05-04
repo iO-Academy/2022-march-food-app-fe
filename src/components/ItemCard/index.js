@@ -1,4 +1,4 @@
-import './ItemCard.css'
+import './ItemCard.scss'
 
 const ItemCard = ({foodName, price, calories, foodType, side}) => {
     return(
