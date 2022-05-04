@@ -10,8 +10,6 @@ const Header = ({restaurantID, resetActiveRestaurant}) => {
                     {restaurantID ? <ChangeRestaurantButton resetActiveRestaurant={resetActiveRestaurant} /> : ''}
                 </div>
             </div>
-            <div className="theLine">
-            </div>
         </>
     )
 }
