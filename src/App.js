@@ -3,7 +3,6 @@ import Homepage from "./components/Homepage"
 import Header from "./components/Header"
 import Jumbotron from './components/Jumbotron'
 import Footer from "./components/Footer"
-import Order_card from "./components/Order_page/Order_card";
 
 const App = () => {
   const [activeRestaurantName, setActiveRestaurantName] = useState("")
@@ -20,7 +19,6 @@ const App = () => {
     <Jumbotron restaurantName={activeRestaurantName} restaurantID={activeRestaurantId}/>
     <Homepage buttonSetter={buttonSetter}/>
     <Footer />
-    <Order_card />
     </>
   )
 }
