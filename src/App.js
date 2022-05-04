@@ -4,22 +4,30 @@ import Header from "./components/Header"
 import Jumbotron from './components/Jumbotron'
 import Footer from "./components/Footer"
 import OrderCard from "./components/OrderPage/OrderCard";
+import OrderPage from "./components/OrderPage";
+
 
 const App = () => {
   const [activeRestaurantName, setActiveRestaurantName] = useState("")
   const [activeRestaurantId, setActiveRestaurantId] = useState(0)
 
-  function buttonSetter(name, id) {
+  const setActiveRestaurant = (name, id)  => {
     setActiveRestaurantName(name)
     setActiveRestaurantId(id)
   }
 
+  const resetActiveRestaurant = () => {
+    setActiveRestaurantName('')
+    setActiveRestaurantId(0)
+  }
+
   return (
     <>
-    <Header />
+    <Header restaurantID={activeRestaurantId} resetActiveRestaurant={resetActiveRestaurant}/>
     <Jumbotron restaurantName={activeRestaurantName} restaurantID={activeRestaurantId}/>
-    <Homepage buttonSetter={buttonSetter}/>
-    <OrderCard />
+
+      {!activeRestaurantId ? <Homepage setActiveRestaurant={setActiveRestaurant} />: <OrderPage activeRestaurantId={activeRestaurantId}/>}
+
     <Footer />
     </>
   )

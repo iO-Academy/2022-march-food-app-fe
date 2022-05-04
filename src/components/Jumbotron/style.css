@@ -1,46 +1,47 @@
-body {
-  margin: 0 auto;
-}
-
 .jumbo_background {
   background-image: url("jumbotron_images/background.jpeg");
   background-size: cover;
   background-position: center;
-  width: auto;
-  height: 350px;
+  height: 250px;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-
-.jumbo_title_box {
+.jumbo_background .jumbo_title_box {
   background: rgba(255, 255, 255, 0.7);
   max-width: 90%;
-  padding: 0px 15px 15px 15px;
+  min-width: 70%;
+  white-space: nowrap;
 }
-
-.jumbo_title {
+.jumbo_background .jumbo_title {
   color: #17a2b8;
-  font-size: 70px;
+  font-size: 40px;
   font-weight: 500;
   margin: 0;
+  text-align: center;
 }
-
-.jumbo_subtitle {
-  font-size: 27px;
+.jumbo_background .jumbo_subtitle {
+  font-size: 16px;
   margin: 0;
+  text-align: center;
+  white-space: normal;
+  padding: 5px;
 }
 
 @media (min-width: 1200px) {
-  .jumbo_title_box {
-    padding: 50px;
+  .jumbo_background {
+    height: 400px;
+    width: 98%;
   }
-
-  .jumbo_title {
+  .jumbo_background .jumbo_title_box {
+    padding: 50px;
+    min-width: 30%;
+  }
+  .jumbo_background .jumbo_title {
     font-size: 40px;
   }
-
-  .jumbo_subtitle {
+  .jumbo_background .jumbo_subtitle {
     font-size: 15px;
     margin-top: 10px;
   }

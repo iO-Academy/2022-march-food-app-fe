@@ -1,11 +1,10 @@
 .App-header {
-  border-bottom-color: #d7d7d7;
-  border-bottom-style: solid;
+  margin-bottom: 15px;
   text-align: center;
-  border-bottom-width: thin;
-  padding: 10px 20px;
+  padding: 15px;
   font-size: 26px;
   font-weight: 600;
+  box-shadow: 0 4px 9px -2px lightgrey;
 }
 
 .blue-text {
@@ -13,8 +12,10 @@
 }
 
 @media screen and (min-width: 745px) {
-  .App-header {
-    text-align: left;
+  .header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
 }
 
