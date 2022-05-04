@@ -1,8 +1,8 @@
 import {useEffect, useState} from "react"
 import Item_card from "../Item_card"
-import './Order_page.scss'
+import './OrderPage.scss'
 
-const Order_page = ({activeRestaurantId}) => {
+const OrderPage = ({activeRestaurantId}) => {
     const [foodItemData, setItemData] = useState([])
 
     useEffect( () =>{
@@ -23,4 +23,4 @@ const Order_page = ({activeRestaurantId}) => {
     )
 }
 
-export default Order_page
+export default OrderPage
