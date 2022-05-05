@@ -1,4 +1,4 @@
-@mixin item_details(){
+@mixin item_details() {
   display: inline-block;
   border-radius: 5px;
   margin-right: 3px;
@@ -6,7 +6,7 @@
   font-size: 10px;
   font-weight: 800;
 }
-.item_card{
+.item_card {
   max-width: 90%;
   border-style: solid;
   margin: 10px;
@@ -14,31 +14,35 @@
   border-width: 1px;
   padding: 20px;
   border-radius: 5px;
-  box-shadow: rgba(0, 0, 0, 0.20) 0px 5px 15px;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 15px;
 }
-.item_name{
+.item_name {
   margin: 5px 0px;
 }
-.item_calories{
+.item_calories {
   background-color: #17a2b8;
   @include item_details;
   color: #ffffff;
 }
 
-.item_type{
-  background-color:#007bff;
+.item_type {
+  background-color: #007bff;
   @include item_details;
   color: #ffffff;
+  margin-bottom: 12px;
 }
 
-.item_category{
+.item_category {
   background-color: #ffc107;
-  @include item_details
+  @include item_details;
 }
 
-.price{
+.item__priceQtyContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.price {
   padding: 15px 0px 5px;
 }
-
-
-
