@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react"
+import './QuantityButtons.scss'
 
 const QuantityButtons = ({ foodName, price, addItem, removeItem, orderObject }) => {
     const [quantity, setQuantity] = useState(0)
@@ -25,16 +26,18 @@ const QuantityButtons = ({ foodName, price, addItem, removeItem, orderObject }) 
 
 
     return (
-        <div>
-        <button onClick={() => {
-            addItem(foodName, price)
-        }
-            }>+</button>
-        <button onClick={() => {
-            removeItem(foodName, price)
-        }}>-</button>
-        <div>{quantity}</div>
-    </div>
+        <div className="quantityButtons">
+            <button className="quantityButtons__btn" onClick={() => {
+                addItem(foodName, price)
+                findQty()
+            }}>+</button>
+            <div className="quantityButtons__qty">{quantity}</div>
+            <button className="quantityButtons__btn" onClick={() => {
+                removeItem(foodName, price)
+                findQty()
+            }}>-</button>
+        </div>
+
     )
 }
 

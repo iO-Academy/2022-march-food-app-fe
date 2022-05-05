@@ -26,12 +26,14 @@ const ItemCard = ({foodName, price, calories, foodType, side, addItem, removeIte
                         side
                     </p> :''}
                 </div>
+
+                <div className='item__priceQtyContainer'>
                 <div className= 'price'>
                     £{price}
                 </div>
-                <QuantityButtons foodName={foodName} price={price} addItem={addItem} removeItem={removeItem} orderObject={orderObject}/>
-                
-            </div>
+                <QuantityButtons foodName={foodName} price={price} addItem={addItem} removeItem={removeItem} orderObject={orderObject}/>  
+                </div>
+                </div>
             
         </>
     )
