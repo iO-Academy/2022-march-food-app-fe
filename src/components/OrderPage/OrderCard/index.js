@@ -1,11 +1,11 @@
 import { useEffect, useState } from 'react'
 import QuantityButtons from '../QuantityButtons'
 import './OrderCard.scss'
-const OrderCard = ({orderObject, addItem, removeItem}) => {
+const OrderCard = ({orderArray, addItem, removeItem}) => {
 
     const [ordersItemDisplay, setOrdersItemDisplay] = useState([])
     
-    let ordersDisplay = orderObject.map(orderItem => {
+    let ordersDisplay = orderArray.map(orderItem => {
         return (
         <div className="item_display">
             <p>{orderItem.foodName}</p>
@@ -14,12 +14,12 @@ const OrderCard = ({orderObject, addItem, removeItem}) => {
             price={orderItem.price}
             addItem={addItem}
             removeItem={removeItem}
-            orderObject={orderObject}
+            orderArray={orderArray}
             />
         </div>
         )
     }) 
-    useEffect (()=>{},[orderObject])
+    useEffect (()=>{},[orderArray])
 
 
     return (

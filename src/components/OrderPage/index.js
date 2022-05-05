@@ -2,18 +2,17 @@ import {useEffect, useState} from "react"
 import ItemCard from "../ItemCard"
 import './OrderPage.scss'
 import OrderCard from "./OrderCard";
-import userEvent from "@testing-library/user-event";
 
 const OrderPage = ({activeRestaurantId}) => {
     const [foodItemData, setItemData] = useState([])
-    const [orderObject, setOrderObject] = useState([])
+    const [orderArray, setOrderArray] = useState([])
 
 
     const addItem = (foodName, price) => {
-        let orderObjectClone = [...orderObject]
-        const orderObjectItem = {foodName : foodName, price : price, qty: 1}
+        let orderObjectClone = [...orderArray]
+        const orderObjectItem = {foodName, price, qty: 1}
         let itemOrdered = false
-        orderObject.forEach((orderItem, key) => {
+        orderArray.forEach((orderItem, key) => {
             if (orderItem.foodName === foodName) {
                 itemOrdered = key
             }
@@ -23,28 +22,23 @@ const OrderPage = ({activeRestaurantId}) => {
         } else {
             orderObjectClone[itemOrdered].qty++
         }
-        setOrderObject(orderObjectClone)
-        console.log(orderObject)
+        setOrderArray(orderObjectClone)
     }
 
     const removeItem = (foodName, price) => {
-        let orderObjectClone = [...orderObject]
-        const orderObjectItem = {foodName : foodName, price : price, qty: 0}
+        let orderObjectClone = [...orderArray]
         let itemOrdered = false
-        orderObject.forEach((orderItem, key) => {
+        orderArray.forEach((orderItem, key) => {
             if (orderItem.foodName === foodName) {
                 itemOrdered = key
             }
         })
-        if (itemOrdered === false) {
-            return
-        } else {
+        if (itemOrdered !== false) {
             orderObjectClone[itemOrdered].qty--
             if (orderObjectClone[itemOrdered].qty < 1) {
                 orderObjectClone.splice(itemOrdered, 1)
             }
-            setOrderObject(orderObjectClone)
-            return
+            setOrderArray(orderObjectClone)
         }
     }
 
@@ -56,14 +50,14 @@ const OrderPage = ({activeRestaurantId}) => {
             })
     }, [])
 
-    let foodItem = foodItemData.map((foodItem) => {
+    let foodItems = foodItemData.map((foodItem) => {
         return <ItemCard
             foodName={foodItem.foodName}
             price={foodItem.price}
             calories={foodItem.calories}
             foodType ={foodItem.foodType}
             side ={foodItem.sideItem}
-            orderObject={orderObject}
+            orderArray={orderArray}
             addItem={addItem}
             removeItem={removeItem}
         />
@@ -72,10 +66,10 @@ const OrderPage = ({activeRestaurantId}) => {
     return (
         <>
             <main className='grid container'>
-                {foodItem}
+                {foodItems}
             </main>
             <OrderCard
-                orderObject={orderObject}
+                orderArray={orderArray}
                 addItem={addItem}
                 removeItem={removeItem}
             />
