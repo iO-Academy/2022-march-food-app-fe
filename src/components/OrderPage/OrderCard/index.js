@@ -9,11 +9,12 @@ const OrderCard = ({orderArray, addItem, removeItem}) => {
     const [deliveryFee, setDeliveryFee] = useState(0)
     const [serviceFee, setServiceFee] = useState(0)
     const [total, setTotal] = useState(0)
-    function addTotals() {
+
+    const addTotals = () => {
 
         let itemTotal = 0
 
-        orderArray.forEach(function (orderItem) {
+        orderArray.forEach(orderItem => {
             itemTotal += (orderItem.price * orderItem.qty)
             setSubtotal(itemTotal)
         })
@@ -42,7 +43,6 @@ const OrderCard = ({orderArray, addItem, removeItem}) => {
             </div>
         )
     })
-    useEffect(()=>{},[orderArray])
 
     let subtotalFloat = parseFloat(subtotal).toFixed(2)
     let serviceFeeFloat = parseFloat(serviceFee).toFixed(2)
