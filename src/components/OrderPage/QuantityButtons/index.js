@@ -4,8 +4,6 @@ import './QuantityButtons.scss'
 const QuantityButtons = ({ foodName, price, addItem, removeItem, orderObject }) => {
     const [quantity, setQuantity] = useState(0)
 
-
-
     function findQty() {
         let itemInOrder = false
         orderObject.forEach(orderItem => {
@@ -14,15 +12,11 @@ const QuantityButtons = ({ foodName, price, addItem, removeItem, orderObject }) 
                 setQuantity(orderItem.qty)
             }
         })
-
         if (!itemInOrder){
             setQuantity(0)
         }
     }
-
     useEffect(findQty, [orderObject])
-
-
 
     return (
         <div className="quantityButtons">
@@ -39,6 +33,5 @@ const QuantityButtons = ({ foodName, price, addItem, removeItem, orderObject }) 
 
     )
 }
-
 
 export default QuantityButtons

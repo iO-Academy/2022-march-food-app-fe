@@ -31,7 +31,6 @@ const OrderPage = ({activeRestaurantId}) => {
         const orderObjectItem = {foodName : foodName, price : price, qty: 0}
         let itemOrdered = false
         orderObject.forEach((orderItem, key) => {
-
             if (orderItem.foodName === foodName) {
                 itemOrdered = key
             }
@@ -42,7 +41,6 @@ const OrderPage = ({activeRestaurantId}) => {
             orderObjectClone[itemOrdered].qty--
             if (orderObjectClone[itemOrdered].qty < 1) {
                 orderObjectClone.splice(itemOrdered, 1)
-
             }
             setOrderObject(orderObjectClone)
             return
