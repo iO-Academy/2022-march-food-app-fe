@@ -10,6 +10,7 @@ import OrderModal from "./OrderModal";
 const OrderPage = ({activeRestaurantId}) => {
     const [foodItemData, setItemData] = useState([])
     const [orderObject, setOrderObject] = useState([])
+    const [modalState, setModalState] = useState(false)
 
 
     const addItem = (foodName, price) => {
@@ -59,6 +60,8 @@ const OrderPage = ({activeRestaurantId}) => {
             })
     }, [])
 
+    useEffect(() => {}, [modalState])
+
     let foodItem = foodItemData.map((foodItem) => {
         return <ItemCard
             foodName={foodItem.foodName}
@@ -81,8 +84,9 @@ const OrderPage = ({activeRestaurantId}) => {
                 orderObject={orderObject}
                 addItem={addItem}
                 removeItem={removeItem}
+                setModalState={setModalState}
             />
-            <OrderModal />
+            {modalState ? <OrderModal setModalState={setModalState}/> : ''}
         </>
     )
 }

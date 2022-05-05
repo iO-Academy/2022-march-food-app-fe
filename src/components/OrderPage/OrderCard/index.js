@@ -1,10 +1,14 @@
 import { useEffect, useState } from 'react'
 import QuantityButtons from '../QuantityButtons'
 import './OrderCard.scss'
-const OrderCard = ({orderObject, addItem, removeItem}) => {
+const OrderCard = ({orderObject, addItem, removeItem, setModalState}) => {
 
     const [ordersItemDisplay, setOrdersItemDisplay] = useState([])
     
+    const toggleModal = () => {
+        setModalState(true)
+    }
+
     let ordersDisplay = orderObject.map(orderItem => {
         return (
         <div className="item_display">
@@ -33,7 +37,7 @@ const OrderCard = ({orderObject, addItem, removeItem}) => {
                 <li><span>Service fee:</span><span>£0.00</span></li>
                 <li className="total"><span>Total:</span><span>£0.00</span></li>
             </ul>
-            <button className="order_btn">Place order</button>
+            <button className="order_btn" onClick={toggleModal}>Place order</button>
         </div>
     )
 }
