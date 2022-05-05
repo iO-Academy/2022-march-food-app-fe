@@ -18,13 +18,13 @@ const OrderPage = ({activeRestaurantId}) => {
                 itemOrdered = key
             }
         })
-      if (itemOrdered === false) {
-        orderObjectClone.push(orderObjectItem)
-       } else {
-       orderObjectClone[itemOrdered].qty++
+        if (itemOrdered === false) {
+            orderObjectClone.push(orderObjectItem)
+        } else {
+            orderObjectClone[itemOrdered].qty++
         }
         setOrderObject(orderObjectClone)
-        console.log(orderObjectClone)
+        console.log(orderObject)
     }
 
     const removeItem = (foodName, price) => {
@@ -32,23 +32,20 @@ const OrderPage = ({activeRestaurantId}) => {
         const orderObjectItem = {foodName : foodName, price : price, qty: 0}
         let itemOrdered = false
         orderObject.forEach((orderItem, key) => {
-            
             if (orderItem.foodName === foodName) {
                 itemOrdered = key
             }
         })
-      if (itemOrdered === false) {
-        orderObjectClone.push(orderObjectItem)
-       } else {
-       orderObjectClone[itemOrdered].qty--
-        if(orderObjectClone[itemOrdered].qty > -1){
-            orderObjectClone.splice(itemOrdered, 1)
+        if (itemOrdered === false) {
+            return
+        } else {
+            orderObjectClone[itemOrdered].qty--
+            if (orderObjectClone[itemOrdered].qty < 1) {
+                orderObjectClone.splice(itemOrdered, 1)
+            }
+            setOrderObject(orderObjectClone)
+            return
         }
-         return
-        }
-        setOrderObject(orderObjectClone)
-        console.log(orderObject)
-
     }
 
     useEffect(() =>{
@@ -60,7 +57,7 @@ const OrderPage = ({activeRestaurantId}) => {
     }, [])
 
     let foodItem = foodItemData.map((foodItem) => {
-        return <ItemCard 
+        return <ItemCard
             foodName={foodItem.foodName}
             price={foodItem.price}
             calories={foodItem.calories}
@@ -69,8 +66,8 @@ const OrderPage = ({activeRestaurantId}) => {
             orderObject={orderObject}
             addItem={addItem}
             removeItem={removeItem}
-            
-            />
+
+        />
     })
 
     return (
@@ -78,13 +75,13 @@ const OrderPage = ({activeRestaurantId}) => {
             <main className='grid container'>
                 {foodItem}
             </main>
-            <OrderCard 
-            addItem={addItem}
-            removeItem={removeItem}
-            orderObject={orderObject}
+            <OrderCard
+                orderObject={orderObject}
+                addItem={addItem}
+                removeItem={removeItem}
             />
         </>
-)
+    )
 }
 
 export default OrderPage
