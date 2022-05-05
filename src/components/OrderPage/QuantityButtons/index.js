@@ -12,7 +12,6 @@ const QuantityButtons = ({ foodName, price, addItem, removeItem, orderObject }) 
             if (orderItem.foodName === foodName) {
                 itemInOrder = true
                 setQuantity(orderItem.qty)
-                console.log('thing')
             }
         })
 
