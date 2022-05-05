@@ -43,7 +43,7 @@ const OrderPage = ({activeRestaurantId}) => {
         if(orderObjectClone[itemOrdered].qty > -1){
             orderObjectClone.splice(itemOrdered, 1)
         }
-
+         return
         }
         setOrderObject(orderObjectClone)
         console.log(orderObject)
