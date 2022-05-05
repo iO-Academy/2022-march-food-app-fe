@@ -66,7 +66,6 @@ const OrderPage = ({activeRestaurantId}) => {
             orderObject={orderObject}
             addItem={addItem}
             removeItem={removeItem}
-
         />
     })
 
