@@ -3,6 +3,9 @@ import ItemCard from "../ItemCard"
 import './OrderPage.scss'
 import OrderCard from "./OrderCard";
 import userEvent from "@testing-library/user-event";
+import OrderModal from "./OrderModal";
+
+
 
 const OrderPage = ({activeRestaurantId}) => {
     const [foodItemData, setItemData] = useState([])
@@ -79,6 +82,7 @@ const OrderPage = ({activeRestaurantId}) => {
                 addItem={addItem}
                 removeItem={removeItem}
             />
+            <OrderModal />
         </>
     )
 }
