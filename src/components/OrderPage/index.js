@@ -9,8 +9,8 @@ const OrderPage = ({activeRestaurantId}) => {
 
 
     const addItem = (foodName, price) => {
-        let orderObjectClone = [...orderArray]
-        const orderObjectItem = {foodName, price, qty: 1}
+        let orderArrayClone = [...orderArray]
+        const orderArrayItem = {foodName, price, qty: 1}
         let itemOrdered = false
         orderArray.forEach((orderItem, key) => {
             if (orderItem.foodName === foodName) {
@@ -18,15 +18,15 @@ const OrderPage = ({activeRestaurantId}) => {
             }
         })
         if (itemOrdered === false) {
-            orderObjectClone.push(orderObjectItem)
+            orderArrayClone.push(orderArrayItem)
         } else {
-            orderObjectClone[itemOrdered].qty++
+            orderArrayClone[itemOrdered].qty++
         }
-        setOrderArray(orderObjectClone)
+        setOrderArray(orderArrayClone)
     }
 
     const removeItem = (foodName, price) => {
-        let orderObjectClone = [...orderArray]
+        let orderArrayClone = [...orderArray]
         let itemOrdered = false
         orderArray.forEach((orderItem, key) => {
             if (orderItem.foodName === foodName) {
@@ -34,11 +34,11 @@ const OrderPage = ({activeRestaurantId}) => {
             }
         })
         if (itemOrdered !== false) {
-            orderObjectClone[itemOrdered].qty--
-            if (orderObjectClone[itemOrdered].qty < 1) {
-                orderObjectClone.splice(itemOrdered, 1)
+            orderArrayClone[itemOrdered].qty--
+            if (orderArrayClone[itemOrdered].qty < 1) {
+                orderArrayClone.splice(itemOrdered, 1)
             }
-            setOrderArray(orderObjectClone)
+            setOrderArray(orderArrayClone)
         }
     }
 

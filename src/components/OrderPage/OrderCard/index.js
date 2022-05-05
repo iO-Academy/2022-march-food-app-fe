@@ -1,9 +1,7 @@
-import { useEffect, useState } from 'react'
+import { useEffect } from 'react'
 import QuantityButtons from '../QuantityButtons'
 import './OrderCard.scss'
 const OrderCard = ({orderArray, addItem, removeItem}) => {
-
-    const [ordersItemDisplay, setOrdersItemDisplay] = useState([])
     
     let ordersDisplay = orderArray.map(orderItem => {
         return (
