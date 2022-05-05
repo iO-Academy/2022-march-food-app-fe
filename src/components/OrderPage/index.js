@@ -2,6 +2,7 @@ import {useEffect, useState} from "react"
 import ItemCard from "../ItemCard"
 import './OrderPage.scss'
 import OrderCard from "./OrderCard";
+import userEvent from "@testing-library/user-event";
 
 const OrderPage = ({activeRestaurantId}) => {
     const [foodItemData, setItemData] = useState([])
