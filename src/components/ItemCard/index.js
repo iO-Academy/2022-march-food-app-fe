@@ -5,22 +5,23 @@ const ItemCard = ({foodName, price, calories, foodType, side, addItem, removeIte
     return(
         <>
             <div className = 'item_card'>
-                <p className='item_name'>{foodName}</p>
-                <div className='item_details'>
-                    <p className = 'item_calories'>
-                        Calories: {calories}
-                    </p>
-                    {foodType ?
-                    <p className = 'item_type'>
-                        Type: {foodType}
-                    </p> : ''
-                }
-                    {side ?
-                    <p className = 'item_category'>
-                        side
-                    </p> :''}
+                <div className='item_header'>
+                    <p className='item_name'>{foodName}</p>
+                    <div className='item_details'>
+                        <p className = 'item_calories'>
+                            Calories: {calories}
+                        </p>
+                        {foodType ?
+                        <p className = 'item_type'>
+                            Type: {foodType}
+                        </p> : ''
+                    }
+                        {side ?
+                        <p className = 'item_category'>
+                            side
+                        </p> :''}
+                    </div>
                 </div>
-
                 <div className='item__priceQtyContainer'>
                     <div className= 'price'>
                         £{price}

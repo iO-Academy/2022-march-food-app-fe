@@ -19,6 +19,20 @@
     }
   }
 
+  .order_display {
+    overflow-y: auto;
+    height: 100px;
+    .item_display {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 5px;
+      gap: 2px;
+      align-items: center;
+      font-size: 13px;
+      font-weight: 600;
+    }
+  }
+
   .total {
     font-weight: 700;
   }
@@ -35,10 +49,16 @@
   }
 }
 
-@media (min-width: 1000px) {
+
+@media (min-width: 850px) {
   .order_card {
-    position: static;
-    width: 25%;
-    max-width: 300px;
+    position: fixed;
+    width: 300px;
+    height: 500px;
+    right: 0;
+
+    .order_display {
+      height: 260px;
+    }
   }
 }
