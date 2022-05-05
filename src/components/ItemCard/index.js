@@ -1,6 +1,7 @@
+import QuantityButtons from '../OrderPage/QuantityButtons'
 import './ItemCard.scss'
 
-const ItemCard = ({foodName, price, calories, foodType, side}) => {
+const ItemCard = ({foodName, price, calories, foodType, side, addItem, removeItem, orderObject}) => {
     return(
         <>
             <div className = 'item_card'>
@@ -19,10 +20,15 @@ const ItemCard = ({foodName, price, calories, foodType, side}) => {
                         side
                     </p> :''}
                 </div>
-                <div className= 'price'>
-                    £{price}
+
+                <div className='item__priceQtyContainer'>
+                    <div className= 'price'>
+                        £{price}
+                    </div>
+                    <QuantityButtons foodName={foodName} price={price} addItem={addItem} removeItem={removeItem} orderObject={orderObject}/>
                 </div>
             </div>
+            
         </>
     )
 }
