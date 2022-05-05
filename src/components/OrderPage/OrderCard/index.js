@@ -1,19 +1,32 @@
+import { useEffect, useState } from 'react'
 import QuantityButtons from '../QuantityButtons'
 import './OrderCard.scss'
-const OrderCard = ({ orderObject}) => {
-    const generateOrdersMarkup = () => {
-        // Loop through the orderObject
-        // For each item in the order object you add name and QuantityButtons component
-        // You return the ordersMarkup JSX
-    }
+const OrderCard = ({orderObject, addItem, removeItem}) => {
 
-    const orderMarkup = generateOrdersMarkup()
+    const [ordersItemDisplay, setOrdersItemDisplay] = useState([])
+    
+    let ordersDisplay = orderObject.map(orderItem => {
+        return (
+        <div>
+            <p>{orderItem.foodName}</p>
+            <QuantityButtons
+            foodName={orderItem.foodName}
+            price={orderItem.price}
+            addItem={addItem}
+            removeItem={removeItem}
+            orderObject={orderObject}
+            />
+        </div>
+        )
+    }) 
+    useEffect (()=>{},[orderObject])
 
 
     return (
         <div className="order_card container">
             <h3><i className="fa-solid fa-cart-shopping shopping_cart"/> Order</h3>
-            {/* <div>{ordersMarkup}</div> */}
+            {/* Display the orderMarkup JSX */}
+            <div>{ordersDisplay}</div>
             <ul className="order_costs">
                 <li><span>Sub-total:</span><span>£0.00</span></li>
                 <li><span>Delivery fee:</span><span>£0.00</span></li>
