@@ -23,7 +23,7 @@ const OrderPage = ({activeRestaurantId}) => {
        orderObjectClone[itemOrdered].qty++
         }
         setOrderObject(orderObjectClone)
-        console.log(orderObjectClone)
+        console.log(orderObject)
     }
 
     const removeItem = (foodName, price) => {
@@ -37,17 +37,16 @@ const OrderPage = ({activeRestaurantId}) => {
             }
         })
       if (itemOrdered === false) {
-        orderObjectClone.push(orderObjectItem)
+        return
        } else {
-       orderObjectClone[itemOrdered].qty--
-        if(orderObjectClone[itemOrdered].qty > -1){
-            orderObjectClone.splice(itemOrdered, 1)
-        }
-         return
-        }
-        setOrderObject(orderObjectClone)
-        console.log(orderObject)
+          orderObjectClone[itemOrdered].qty--
+          if (orderObjectClone[itemOrdered].qty < 1) {
+              orderObjectClone.splice(itemOrdered, 1)
 
+          }
+          setOrderObject(orderObjectClone)
+          return
+      }
     }
 
     useEffect(() =>{
