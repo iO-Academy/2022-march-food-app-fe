@@ -7,7 +7,7 @@ const OrderCard = ({orderObject, addItem, removeItem}) => {
     
     let ordersDisplay = orderObject.map(orderItem => {
         return (
-        <div>
+        <div className="item_display">
             <p>{orderItem.foodName}</p>
             <QuantityButtons
             foodName={orderItem.foodName}
@@ -26,7 +26,7 @@ const OrderCard = ({orderObject, addItem, removeItem}) => {
         <div className="order_card container">
             <h3><i className="fa-solid fa-cart-shopping shopping_cart"/> Order</h3>
             {/* Display the orderMarkup JSX */}
-            <div>{ordersDisplay}</div>
+            <div className="order_display">{ordersDisplay}</div>
             <ul className="order_costs">
                 <li><span>Sub-total:</span><span>£0.00</span></li>
                 <li><span>Delivery fee:</span><span>£0.00</span></li>
