@@ -4,6 +4,7 @@ import Header from "./components/Header"
 import Jumbotron from './components/Jumbotron'
 import Footer from "./components/Footer"
 import OrderPage from "./components/OrderPage";
+import LoadingBar from "./components/LoadingBar";
 
 const App = () => {
   const [activeRestaurantName, setActiveRestaurantName] = useState("")
@@ -21,6 +22,7 @@ const App = () => {
 
   return (
     <>
+      <LoadingBar />
     <Header restaurantID={activeRestaurantId} resetActiveRestaurant={resetActiveRestaurant}/>
     <Jumbotron restaurantName={activeRestaurantName} restaurantID={activeRestaurantId}/>
       {!activeRestaurantId ? <Homepage setActiveRestaurant={setActiveRestaurant} />: <OrderPage activeRestaurantId={activeRestaurantId}/>}
