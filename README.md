@@ -1,70 +1,62 @@
-# Getting Started with Create React App
+# Food.Delivered
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Food.Delivered is a food delivery app developed by the Beetles, the March 2022 cohort of Eyup Academy. 🍔
 
-## Available Scripts
+## Description 
 
-In the project directory, you can run:
+Food.Delivered is a mobile-first food delivery app created over a four day sprint in May 2022. The project was built in [Create React App](https://github.com/facebook/create-react-app) and styled to a mirror the provided design with SASS. We worked with a client-provided API to display restaurants and food menu items. The app makes use of shared state to provide a seamless user experience. The app is fully unit tested, take a look at how to run the tests below. 
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Installation 
+Clone the repo:
+```
+git@github.com:iO-Academy/2022-march-food-app-fe.git
+```
+Navigate to the directory:
+``` 
+cd 2022-march-food-app-fe
+```
+From the project route run the command:
+```
+npm install
+```
+To start the app on your local host:
+```
+npm start
+```
+This runs the app in the development mode. Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+The page will reload when you make changes. You may also see any lint errors in the console.
 
-### `npm test`
+You will also need to install the delivery API, [click here](https://github.com/iO-Academy/food-delivery-api) to check out how to install the API.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Run tests 
 
-### `npm run build`
+```
+npm test
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Authors 
+The Beetles Scrum Team
+- Seb Lamberts [@haefnir](https://github.com/haefnir)
+- Mike Lawrence [@mjalawrence](https://github.com/mjalawrence)
+- Richard Mead [@Mead-y](https://github.com/Mead-y)
+- Ali McGarry [@doubt-ur-vibe](https://github.com/doubt-ur-vibe)
+- Lottie Rugg-Easey [@LottieRugg](https://github.com/LottieRugg)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Live Site
+Have a look at the app!
+```
+https://2022-beetles-food-app-fe.dev.io-academy.uk/
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Thanks to 
+- iO Academy and trainer [@ashleycoles](https://github.com/ashleycoles)🍟
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
+## Learn More about React
 
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
 To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
